@@ -1,0 +1,145 @@
+.pokemon-btn-green {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: radial-gradient(
+    hsl(109, 99%, 69%),
+    hsl(109, 99%, 39%)
+  ); /* Standard syntax */
+  text-shadow: 0 -1px 0 hsl(109, 89%, 42%);
+  color: white;
+  border: solid 1px hsl(109, 99%, 49%);
+  border-radius: 100%;
+  z-index: 1;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  outline: none;
+
+  box-shadow: inset 0 0.5px 0 hsl(109, 99%, 49%), 0 1px 0 hsl(109, 99%, 19%),
+    0 1.5px 0 hsl(109, 99%, 17%), 0 2px 0 hsl(109, 99%, 15%),
+    0 2.5px 0 hsl(109, 99%, 13%), 0 3px 0 hsl(109, 99%, 11%),
+    0 3.5px 0 hsl(109, 99%, 9%), 0 4px 0 hsl(109, 99%, 7%),
+    0 4.5px 0 hsl(109, 99%, 5%);
+}
+
+.pokemon-btn-orange {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: radial-gradient(
+    hsl(48, 100%, 70%),
+    hsl(48, 100%, 50%)
+  ); /* Standard syntax */
+  text-shadow: 0 -1px 0 hsl(48, 97%, 40%);
+  color: white;
+  border: solid 1px hsl(48, 97%, 30%);
+  border-radius: 100%;
+  z-index: 1;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  outline: none;
+
+  box-shadow: inset 0 0.5px 0 hsl(48, 100%, 50%), 0 1px 0 hsl(48, 100%, 20%),
+    0 1.5px 0 hsl(48, 100%, 18%), 0 2px 0 hsl(48, 100%, 16%),
+    0 2.5px 0 hsl(48, 100%, 14%), 0 3px 0 hsl(48, 100%, 12%),
+    0 3.5px 0 hsl(48, 100%, 10%), 0 4px 0 hsl(48, 100%, 8%),
+    0 4.5px 0 hsl(48, 100%, 6%);
+}
+
+.pokemon-btn-green:hover {
+  background: radial-gradient(
+    hsl(109, 99%, 69%),
+    hsl(109, 96%, 49%)
+  ); /* Standard syntax */
+}
+.pokemon-btn-orange:hover {
+  background: radial-gradient(
+    hsl(48, 96%, 70%),
+    hsl(48, 100%, 90%)
+    
+  ); /* Standard syntax */
+}
+
+.pokemon-btn-green:active {
+  background: radial-gradient(
+    hsl(109, 96%, 86%),
+    hsl(109, 99%, 39%)
+  ); /* Standard syntax */
+
+  top: 2px;
+
+  box-shadow: inset 0 0.5px 0 hsl(48, 100%, 50%), 0 1px 0 hsl(48, 100%, 20%),
+    0 1.5px 0 hsl(48, 100%, 18%), 0 2px 0 hsl(48, 100%, 16%),
+    0 2.5px 0 hsl(48, 100%, 14%), 0 3px 0 hsl(48, 100%, 12%),
+    0 3.5px 0 hsl(48, 100%, 10%), 0 4px 0 hsl(48, 100%, 8%),
+    0 4.5px 0 hsl(48, 100%, 6%);
+}
+.pokemon-btn-orange:active {
+  background: radial-gradient(
+    hsl(48, 100%, 80%),
+    hsl(48, 100%, 55%)
+  ); /* Standard syntax */
+
+  top: 2px;
+
+  box-shadow: inset 0 0.5px 0 hsl(0, 100%, 50%), 0 1px 0 hsl(0, 100%, 20%),
+    0 1.5px 0 hsl(0, 100%, 18%), 0 2px 0 hsl(0, 100%, 16%),
+    0 2.5px 0 hsl(0, 100%, 14%), 0 3px 0 hsl(0, 100%, 12%),
+    0 3.5px 0 hsl(0, 100%, 10%);
+}
+.janier:hover {
+  color: black;
+}
+
+.porky:hover {
+color: black;
+}
+
+.pokedex-screen-container3 {
+  border-radius: 10px 10px;
+  margin-bottom: 5px;
+  padding: 0.8rem;
+  width: 300px;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50% 50%;
+}
+
+.pokedex-screen-container3 p {
+  color: white;
+}
+.pokedex-screen-container3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.celdas-azules {
+  background: radial-gradient(hsl(214, 91%, 68%), hsl(214, 70%, 45%));
+  border: 1px 1px 1px 0 solid black;
+
+  margin: 2.5px;
+  box-shadow: inset 0 0.5px 0 hsl(214, 91%, 68%), 0 1px 0 hsl(214, 91%, 34%),
+    0 1.5px 0 hsl(214, 91%, 32%), 0 2px 0 hsl(214, 91%, 30%),
+    0 2.5px 0 hsl(214, 91%, 20%), 0 3px 0 hsl(214, 91%, 18%),
+    0 3.5px 0 hsl(214, 91%, 16%);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.celdas-azules:hover {
+  background: #437cc7;
+  cursor: pointer;
+}
+
+.celdas-azules:active {
+  background: radial-gradient(hsl(214, 91%, 85%), hsl(214, 91%, 45%));
+}

@@ -1,0 +1,10 @@
+.pokeimg{
+  max-width: 90%;
+  max-height:95%;
+  transition: width 2s;
+}
+
+.pokeimg:hover {
+  width: 800px;
+}
+
