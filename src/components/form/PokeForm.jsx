@@ -1,14 +1,15 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from '../../../contexts/app/app.context'
+import { useContext, useState } from "react";
+import { AppContext } from '../../context/app/app.context'
 
 export const PokeForm = () => {
-  const {mutations:{searchPokemon}} = useContext(AppContext)
+    const {mutations} = useContext(AppContext)
     const [pokeName, setPokeName] = useState('')
 
     const handleSubmit = (event) =>{
         event.preventDefault();
+        console.log(pokeName);
         if (pokeName.length > 0) {
-          searchPokemon(pokeName);
+          mutations.searchPokemon(pokeName);
         }
     }
 
@@ -26,4 +27,4 @@ export const PokeForm = () => {
       <button type="submit" className="pokemon-btn" />
     </form>
   );
-};
+}

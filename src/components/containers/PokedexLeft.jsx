@@ -1,23 +1,20 @@
 import React from "react";
-import { PokeScreen } from "../../common/poke-screen";
-import { Stats } from "../../common/stats";
-import { PokeForm } from "../../form/poke-form";
+import { PokeScreen } from "../common/pokeScreen";
+import { PokeForm } from "../form/PokeForm";
+import { Stats } from "../common/stats/Stats";
 
 export const PokedexLeft = () => {
-
   const mockData = [
     {
-      
       color: "green",
-      className: "janier",
+      className: "btn__garge",
     },
     {
-      
       color: "orange",
-      className: "porky",
+      className: "btn__garge",
     },
   ];
-  
+
   return (
     <div className="pokedex-left">
       <div className="pokedex-left-top">
@@ -31,16 +28,18 @@ export const PokedexLeft = () => {
       </div>
       <div className="pokedex-left-bottom">
         <div className="pokedex-left-bottom-lights">
-          
           <div className="pokedex-left-bottom-lights">
-        <div className="light is-blue is-medium" />
-        
-        {mockData.map((item) => (
-          <button className={` pokemon-btn-${item.color}   ${item.className}`}>
-            {<Stats item={item} />}
-          </button>
-        ))}
-      </div>
+            <div className="light is-blue is-medium" />
+
+            {mockData.map((item, i) => (
+              <button
+              key={i}
+                className={` pokemon-btn-${item.color}   ${item.className}`}
+              >
+                {<Stats item={item} />}
+              </button>
+            ))}
+          </div>
         </div>
         <PokeForm />
       </div>

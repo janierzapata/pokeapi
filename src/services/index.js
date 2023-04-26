@@ -1,11 +1,18 @@
+import axios from "axios";
 
-import axios from'axios';
-import { PokemonService } from './pokemon.services'
-
-class ImplementService {
-    constructor(){
-        this.PokemonService = new PokemonService(axios);
+export const AppiService = () => {
+  
+  const getPokemon = async (id) => {
+    try {
+      const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+      const { data } = await axios.get(url);
+      return data;
+    } catch (error) {
+      throw error;
     }
-}
+  };
 
-export const AppiService = new ImplementService();
+  return {
+    getPokemon,
+  };
+};

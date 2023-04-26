@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
-import "./style.css";
-import { Stats } from "../stats";
-import { AppContext } from "../../../contexts/app/app.context";
-import { Pokeimage } from "./pokeimage";
+import "./styles.css";
+import { Stats } from "../stats/Stats";
+import { AppContext } from "../../../context/app/app.context";
+import { PokeImage } from "./PokeImage";
+
 const mockData = [
   {
     name: "HP",
@@ -30,36 +31,40 @@ const mockData = [
     base_stat: 78,
   },
 ];
+
 export const PokeScreen = () => {
   const {
     data: { pokemon, error, loading },
   } = useContext(AppContext);
 
+  console.log('pokemon ==>',pokemon.sprites
+  );
+
+  
+
   if (!pokemon.name) {
     return <h1>Ingrese un pokemon valido</h1>;
   }
-
   return (
     <div className="pokedex-screen ">
-      {/* <div>
-
-          <Pokeimage />
-        </div> */}
       {error ? (
         <h1> Ingrese un pokemon valido</h1>
       ) : loading ? (
         setTimeout(() => {
-          <h1>Loading...</h1>
+          <h1>Loading...</h1>;
         }, 3000)
       ) : (
-        <div className="pokemon-info contenedor ">
-          <h2 className="pokemon-name"> {pokemon.name} </h2>
-          <ul>
-            {pokemon.stats.map((item) => (
-              <Stats key={item.name} item={item} />
-            ))}
-          </ul>
-        </div>
+        <>
+          <PokeImage images={pokemon.sprites} />
+          <div className="pokemon-info contenedor ">
+            <h2 className="pokemon-name"> {pokemon.name} </h2>
+            <ul>
+              {pokemon.stats.map((item, i) => (
+                <Stats key={i} item={item} />
+              ))}
+            </ul>
+          </div>
+        </>
       )}
     </div>
   );
